@@ -1,0 +1,356 @@
+/* Styles pour la barre de navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em; /* Taille des liens augmentée */
+  padding: 10px 20px; /* Espacement des liens */
+}
+
+/* Styles pour le conteneur principal */
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /* Styles pour la section "À propos" */
+ #about {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+
+.about-content p{
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  /* max-width: 1400px; Ajoutez cette propriété pour limiter la largeur du texte */
+  margin-left: 50px; 
+  margin-right: 50px;
+}
+
+/* Styles pour le titre "À propos" */
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+#contact {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Styles pour les liens */
+.contact-links a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-links a img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+
+ section {
+  padding: 50px 20px;
+  margin-top: 100vh; /* Décale les sections sous la vue */
+    background-color: #f5f5f5;
+}  
+
+/* .anim-element {
+  opacity: 0;
+  transform: translateY(20px); Décalage initial vers le bas
+  /* transition: opacity 0.5s ease, transform 0.5s ease;
+} */
+
+/* .anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}  */ 
+/* Styles pour les sections */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(20px); /* Décalage initial vers le bas */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Ajout de l'effet lorsqu'une section est visible */
+.scroll-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content {
+  text-align: center;
+}
+
+.name {
+  animation: fadeInUp 3s ease-out;
+  color: white;
+  font-size: 6em; /* Taille de la police pour "Maud Hué" */
+  font-family: 'roboto', serif;
+}
+
+.subtitle {
+  animation: fadeInUp 1s ease-out;
+  color: white;
+  font-size: 4.5em; /* Taille de la police pour le sous-titre */
+  font-family: 'roboto mono', monospace;
+}
+
+/* Ajout de l'effet lorsqu'une section est active */
+.scroll-section.active .subtitle {
+  opacity: 1;
+}
+/* Animation pour le fondu en haut */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+a:visited,a{
+ color: #333;
+}
+
+a:hover {
+  color: #95A5A6;
+  }
+  
+  
+  
+  .custom-cursor {
+    position: fixed;
+    width: 60px; /* Largeur du cercle */
+    height: 60px; /* Hauteur du cercle */
+    border-radius: 50%; /* Forme du cercle */
+    border: 1px solid black;
+    pointer-events: none; /* Empêche le curseur personnalisé d'interférer avec les interactions */
+    z-index: 9999; /* Assure que le curseur reste au-dessus du reste du contenu */
+    display: none; /* Cache initialement le curseur personnalisé */
+    transform: translate(-50%, -50%);
+    transition-property:6s;
+  }
+  #contact {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  /* Styles pour le formulaire de contact */
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .contact-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+
+  .contact-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Styles pour le titre "Contact" */
+  .contact-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  /* Styles pour les liens */
+  .contact-links a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+
+  .contact-links a img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  .calendly-inline-widget {
+    height: 700px; 
+  }
+  *
+  #portfolio {
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: 1fr 2fr !important; 
+    gap: 20px;
+  }
+
+  /* Styles pour la liste des projets */
+ 
+  .projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .projects-list li {
+    margin-bottom: 15px;
+  }
+
+  .projects-list li a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .projects-list li a:hover {
+    background-color: #eaeaea;
+  }
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.5px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#portfolio {
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.project h2 {
+  margin-top: 0;
+}
+
+
+.project a {
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 14px;
+  margin-left: 120px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
